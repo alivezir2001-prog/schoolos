@@ -1,0 +1,86 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+/* =========================
+   SchoolOS Theme
+   ========================= */
+
+.fi-sidebar {
+    background: #1e3a5f !important;
+}
+
+.fi-sidebar-nav {
+    background: #1e3a5f !important;
+}
+
+.fi-sidebar-item-active a {
+    background: #2563eb !important;
+    border-radius: 10px;
+}
+
+.fi-main {
+    background: #f5f7fb !important;
+}
+
+.fi-section {
+    border-radius: 14px !important;
+}
+
+.fi-ta-card,
+.fi-wi-stats-overview-stat {
+    border-radius: 14px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
+}
+
+/* SchoolOS Dashboard */
+
+.fi-wi-stats-overview-stat {
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,.08) !important;
+    transition: all .2s ease;
+}
+
+.fi-wi-stats-overview-stat:hover {
+    transform: translateY(-3px);
+}
+
+.fi-wi-stats-overview-stat:nth-child(1) {
+    border-top: 4px solid #2563eb;
+}
+
+.fi-wi-stats-overview-stat:nth-child(2) {
+    border-top: 4px solid #22c55e;
+}
+
+.fi-wi-stats-overview-stat:nth-child(3) {
+    border-top: 4px solid #a855f7;
+}
+
+.fi-wi-stats-overview-stat:nth-child(4) {
+    border-top: 4px solid #f59e0b;
+}
+
+/* Sidebar yazıları */
+
+.fi-sidebar-nav a {
+    color: #ffffff !important;
+}
+
+.fi-sidebar-group-label {
+    color: #cbd5e1 !important;
+}
+
+.fi-sidebar-item-label {
+    color: #ffffff !important;
+}
+
+.fi-sidebar-item-icon {
+    color: #cbd5e1 !important;
+}
+
+.fi-sidebar-item-active a {
+    color: #2563eb !important;
+    background: #ffffff !important;
+}
