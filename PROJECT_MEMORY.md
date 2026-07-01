@@ -193,7 +193,7 @@ Documentation is permanent.
 
 Current document
 
-**docs/01_philosophy/DEVELOPMENT_THEORY.md**
+research/development/DEVELOPMENT_NOTES.md
 
 Current research questions
 
@@ -235,26 +235,51 @@ Current research questions
 - Architecture precedes production code.
 
 ---
+## 2026-07-02
+
+### Completed
+
+- Established the `research/` workspace.
+- Created research notes for:
+  - Development
+  - Evidence
+  - Organizational Memory
+- Defined the distinction between research and documentation.
+
+### Major Discoveries
+
+- Experience appears to be necessary for development.
+- Experience alone does not guarantee development.
+- Learning is an outcome of experience.
+- Development may emerge through the long-term integration of learning within memory.
+- Human and organizational development may follow the same underlying mechanism.
+- Institutional memory may be a prerequisite for sustainable organizational development.
+
+### Major Decisions
+
+- Research ideas will be developed in `research/`.
+- Only mature ideas will be promoted to `docs/`.
+- Every theory must survive criticism before becoming official documentation.
 
 # Next Session
 
 ## Primary Goal
 
-Complete **DEVELOPMENT_THEORY.md**
+Continue exploring the SchoolOS Development Theory.
 
 ### Planned Topics
 
 - Define development.
-- Distinguish change from development.
-- Define meaningful development.
-- Define development domains.
-- Explore the relationship between evidence and development.
+- Explore the relationship between experience and learning.
+- Explore the role of memory.
+- Challenge existing hypotheses.
+- Promote mature hypotheses into Development Theory when ready.
 
 ### Deliverables
 
-- ✅ DEVELOPMENT_THEORY.md (Draft v0.1)
-- ✅ Updated PROJECT_MEMORY.md
-- ✅ Git commit
+- Updated DEVELOPMENT_NOTES.md
+- Updated PROJECT_MEMORY.md
+- Git commit
 
 ---
 
@@ -269,7 +294,8 @@ Ideas intentionally postponed.
 - School Development Index
 - Opportunity Detection
 - AI Reasoning Engine
-
+- Development Universe
+- Organizational Learning Theory
 ---
 
 # Decision Log
@@ -298,3 +324,14 @@ Ideas intentionally postponed.
 # One Question For Tomorrow
 
 **What exactly transforms an observation into evidence?**
+# Active Research
+
+Current active research areas:
+
+- Development Theory
+- Evidence Theory
+- Organizational Memory Theory
+
+Next candidate:
+
+- School Theory
