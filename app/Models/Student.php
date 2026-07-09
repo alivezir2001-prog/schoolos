@@ -27,4 +27,9 @@ class Student extends Model
     {
         return $this->belongsTo(SchoolClass::class);
     }
+
+    public function getFullNameAttribute(): string
+{
+    return "{$this->first_name} {$this->last_name}";
+}
 }
