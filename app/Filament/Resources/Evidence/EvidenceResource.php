@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources\Evidence;
 
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\Auth;
 use App\Filament\Resources\Evidence\Pages\CreateEvidence;
 use App\Filament\Resources\Evidence\Pages\EditEvidence;
 use App\Filament\Resources\Evidence\Pages\ListEvidence;
@@ -41,6 +43,23 @@ class EvidenceResource extends Resource
     {
         return EvidenceTable::configure($table);
     }
+
+    public static function getEloquentQuery(): Builder
+    {
+    $query = parent::getEloquentQuery();
+
+    $user = Auth::user();
+
+    if (! $user) {
+        return $query;
+    }
+
+    if ($user->role?->code === 'SYS_ADMIN') {
+        return $query;
+    }
+
+    return $query->where('school_id', $user->school_id);
+}
 
     public static function getRelations(): array
     {

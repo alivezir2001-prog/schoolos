@@ -1,0 +1,26 @@
+[90m= [39m[34;4mIlluminate\Database\Eloquent\Collection[39;24m {#9502
+    [34mall[39m: [
+      [34;4mApp\Models\Evidence[39;24m {#9504
+        [34mid[39m: [35m1[39m,
+        [34mschool_id[39m: [35m3[39m,
+        [34mstudent_id[39m: [35m1[39m,
+        [34mobserver_id[39m: [35m1[39m,
+        [34mtitle[39m: [32m"[39m[32mFen Laboratuvarı Çalışması[39m[32m"[39m,
+        [34mdescription[39m: [32m"[39m[32mLaboratuvar etkinliği sırasında deney düzeneğini hazırladı ve ekip arkadaşlarının görev paylaşımını organize etti.[39m[32m"[39m,
+        [34mobserved_at[39m: [32m"[39m[32m2026-07-10 00:23:04[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-09 21:23:07[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-09 21:23:07[39m[32m"[39m,
+      },
+      [34;4mApp\Models\Evidence[39;24m {#9505
+        [34mid[39m: [35m2[39m,
+        [34mschool_id[39m: [35m3[39m,
+        [34mstudent_id[39m: [35m3[39m,
+        [34mobserver_id[39m: [35m1[39m,
+        [34mtitle[39m: [32m"[39m[32mSınıf İçi Konuşma[39m[32m"[39m,
+        [34mdescription[39m: [32m"[39m[32mİlk kez konuştu[39m[32m"[39m,
+        [34mobserved_at[39m: [32m"[39m[32m2026-07-09 21:26:12[39m[32m"[39m,
+        [34mcreated_at[39m: [32m"[39m[32m2026-07-09 21:26:50[39m[32m"[39m,
+        [34mupdated_at[39m: [32m"[39m[32m2026-07-09 21:26:50[39m[32m"[39m,
+      },
+    ],
+  }

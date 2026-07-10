@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Evidence extends Model
+
+
 {
     protected $table = 'evidence';
 
@@ -16,6 +18,7 @@ class Evidence extends Model
         'title',
         'description',
         'observed_at',
+        'attachment_path',
     ];
 
     protected $casts = [
