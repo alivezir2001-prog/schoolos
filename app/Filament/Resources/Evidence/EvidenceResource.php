@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Evidence;
 
+use App\Core\Scopes\SchoolScope;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Auth;
 use App\Filament\Resources\Evidence\Pages\CreateEvidence;
@@ -58,7 +59,7 @@ class EvidenceResource extends Resource
         return $query;
     }
 
-    return $query->where('school_id', $user->school_id);
+    return SchoolScope::apply($query);
 }
 
     public static function getRelations(): array

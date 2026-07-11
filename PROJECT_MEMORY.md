@@ -335,3 +335,41 @@ Current active research areas:
 Next candidate:
 
 - School Theory
+
+## 2026-07-11
+
+Major Architectural Decision
+
+SchoolOS is no longer modeled as a traditional School Management System.
+
+It is now modeled as an Educational Intelligence Platform.
+
+Primary Educational Entity:
+
+Observation
+
+Educational Flow:
+
+Observation
+→ Collective Educational Memory
+→ Pattern Recognition
+→ Evidence
+→ Development
+→ Portfolio
+→ Educational Intelligence
+
+Architectural Principle:
+
+Observation is the only primary educational data.
+
+Everything else is derived.
+
+Teachers never create evidence.
+
+Teachers create observations.
+
+Evidence emerges through intelligent interpretation of collective educational memory.
+
+New Core Document:
+
+docs/philosophy/EDUCATIONAL_INTELLIGENCE_MODEL.md

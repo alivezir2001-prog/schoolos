@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Students;
 
+use App\Core\Authorization\SchoolScope;
 use App\Filament\Resources\Students\Pages\CreateStudent;
 use App\Filament\Resources\Students\Pages\EditStudent;
 use App\Filament\Resources\Students\Pages\ListStudents;
@@ -14,7 +15,7 @@ use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Facades\Auth;
+
 
 class StudentResource extends Resource
 {
@@ -39,22 +40,13 @@ class StudentResource extends Resource
     }
 
     public static function getEloquentQuery(): Builder
-    {
-        $query = parent::getEloquentQuery()
-            ->where('active', true);
+{
+        return SchoolScope::apply(
+        parent::getEloquentQuery()
+            ->where('active', true)
+    );
 
-        $user = Auth::user();
-
-        if (!$user) {
-            return $query;
-        }
-
-        if ($user->role?->code === 'SYS_ADMIN') {
-            return $query;
-        }
-
-        return $query->where('school_id', $user->school_id);
-    }
+}
 
     public static function getRelations(): array
     {

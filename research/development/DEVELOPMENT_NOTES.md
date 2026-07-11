@@ -226,3 +226,17 @@ If memory is a foundational system of development:
 - Is identity stored within memory, or does it emerge from memory?
 - Can development occur without long-term memory?
 - How should SchoolOS model memory?
+
+## 2026-07-11
+
+### Evidence Sprint 1 Completed
+
+Completed features:
+
+- Evidence CRUD
+- School-based authorization
+- Automatic school assignment
+- Automatic observer assignment
+- Student filtering by school
+- File attachment support
+- Image preview

@@ -65,12 +65,18 @@ class StudentsTable
             ->filters([
                 SelectFilter::make('school_id')
                     ->label('Okul')
-                    ->options(
-                        School::query()
+                    ->options(function () {
+                        $options = School::query();
+
+                        if (auth()->user()->role?->code !== 'SYS_ADMIN') {
+                            $options->where('id', auth()->user()->school_id);
+                        }
+
+                        return $options
                             ->orderBy('name')
                             ->pluck('name', 'id')
-                            ->toArray()
-                    ),
+                            ->toArray();
+                    }),
 
                 SelectFilter::make('school_class_id')
                     ->label('Sınıf')
