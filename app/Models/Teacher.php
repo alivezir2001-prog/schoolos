@@ -3,8 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\School;
-use App\Models\Lesson;
 
 class Teacher extends Model
 {
@@ -20,18 +18,39 @@ class Teacher extends Model
         'active',
     ];
 
+    protected $appends = [
+        'full_name',
+    ];
+
+    /*
+    |--------------------------------------------------------------------------
+    | Accessors
+    |--------------------------------------------------------------------------
+    */
+
+    public function getFullNameAttribute(): string
+    {
+        return "{$this->first_name} {$this->last_name}";
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    */
+
     public function school()
     {
         return $this->belongsTo(School::class);
     }
 
-	public function lessons()
-	{
-	    return $this->belongsToMany(
-	        Lesson::class,
-	        'teacher_lesson'
-	    );
-	}
+    public function lessons()
+    {
+        return $this->belongsToMany(
+            Lesson::class,
+            'teacher_lesson'
+        );
+    }
 
     public function homeroomClass()
     {
@@ -39,5 +58,10 @@ class Teacher extends Model
             SchoolClass::class,
             'homeroom_class_id'
         );
+    }
+
+    public function teachingAssignments()
+    {
+        return $this->hasMany(TeachingAssignment::class);
     }
 }

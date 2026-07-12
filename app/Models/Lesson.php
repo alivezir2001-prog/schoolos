@@ -3,26 +3,36 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Teacher;
 
 class Lesson extends Model
 {
-   protected $fillable = [
+    protected $fillable = [
         'school_id',
         'name',
         'active',
     ];
 
-	public function teachers()
-	{
-	    return $this->belongsToMany(
-	        Teacher::class,
-	        'teacher_lesson'
-	    );
-	}
-	
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    */
+
     public function school()
     {
         return $this->belongsTo(School::class);
+    }
+
+    public function teachers()
+    {
+        return $this->belongsToMany(
+            Teacher::class,
+            'teacher_lesson'
+        );
+    }
+
+    public function teachingAssignments()
+    {
+        return $this->hasMany(TeachingAssignment::class);
     }
 }

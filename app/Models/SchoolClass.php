@@ -14,6 +14,12 @@ class SchoolClass extends Model
         'active',
     ];
 
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    */
+
     public function school()
     {
         return $this->belongsTo(School::class);
@@ -22,5 +28,10 @@ class SchoolClass extends Model
     public function students()
     {
         return $this->hasMany(Student::class);
+    }
+
+    public function teachingAssignments()
+    {
+        return $this->hasMany(TeachingAssignment::class);
     }
 }

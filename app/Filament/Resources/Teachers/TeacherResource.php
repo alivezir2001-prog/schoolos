@@ -21,6 +21,7 @@ class TeacherResource extends Resource
 	protected static string|\UnitEnum|null $navigationGroup = '🎓 Akademik';
 	
 	protected static ?string $navigationLabel = 'Öğretmenler';
+    
     protected static ?string $model = Teacher::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;

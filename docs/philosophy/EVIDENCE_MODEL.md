@@ -1,4 +1,4 @@
-# Evidence Theory
+# Evidence Model
 
 | Field | Value |
 |-------|-------|
@@ -8,6 +8,16 @@
 | Last Updated | 2026-07-01 |
 
 ---
+# Purpose
+
+This document defines the Evidence Model used by SchoolOS.
+
+Rather than treating evidence as isolated facts or observations, SchoolOS understands evidence as meaningful patterns that emerge over time.
+
+The Evidence Model explains how observations become evidence, how evidence supports educational understanding, and how Artificial Intelligence transforms evidence into meaningful educational insights.
+
+This document serves as one of the core conceptual models of the SchoolOS Educational Intelligence Platform.
+
 
 # Evidence Theory
 
