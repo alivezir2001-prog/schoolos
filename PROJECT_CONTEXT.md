@@ -1,153 +1,107 @@
 # SchoolOS Project Context
 
-> This document provides the minimum context required for any human or AI contributor to continue the SchoolOS project without losing continuity.
+Version: 1.0
 
-Every contributor should read this document before making decisions.
-
----
-
-# 1. What is SchoolOS?
-
-SchoolOS is not another school management system.
-
-SchoolOS exists to make development journeys visible, understandable, preserved and continuously supported.
-
-The platform is designed around people rather than administrative processes.
+Last Updated: 2026-07-13
 
 ---
 
-# 2. Project Goal
+# Vision
 
-The goal of SchoolOS is to build a software platform that helps schools become continuously learning communities by supporting human development, evidence-based decision making and institutional memory.
+SchoolOS is an Educational Intelligence Platform.
 
----
+It is not a school automation system.
 
-# 3. Current Phase
-
-Foundation Design
-
-The project is intentionally designing its philosophy, language, theories and architecture before writing production code.
+It supports human development through meaningful evidence.
 
 ---
 
-# 4. Core Philosophy
+# Product Philosophy
 
-The following principles currently guide the project.
-
-- Development before success.
-- People before data.
-- Evidence before assumptions.
-- Institutional memory is a strategic asset.
+- Every learner is unique.
+- Development cannot be measured directly.
+- Evidence is more important than scores.
 - AI supports human judgement.
-- Technology serves people.
+- Transparency creates trust.
 
 ---
 
-# 5. Development Methodology
+# Core Documents
 
-SchoolOS is developed using the following workflow.
-
-Research
-
-↓
-
-Documentation
-
-↓
+Manifesto
 
 Architecture
 
-↓
+Development Theory
 
-Implementation
+Evidence Theory
 
-Ideas are first explored inside the `research/` directory.
+Academic Model
 
-Only mature ideas are promoted into `docs/`.
-
----
-
-# 6. Repository Structure
-
-README.md
-
-PROJECT_CONTEXT.md
-
-PROJECT_MEMORY.md
-
-docs/
-
-research/
+UX Blueprint
 
 ---
 
-# 7. Active Research
+# Technology
 
-Current active topics
+Laravel 13
 
-- Development Theory
-- Evidence Theory
-- Organizational Memory
-- School Philosophy
+Filament 5
 
----
+PHP 8.3
 
-# 8. Current Focus
+MariaDB
 
-Current document
+Ubuntu
 
-research/development/DEVELOPMENT_NOTES.md
-
-Current objective
-
-Continue defining the SchoolOS Development Theory.
+OVH VPS
 
 ---
 
-# 9. Current Understanding
+# Development Rules
 
-The following ideas represent the current best understanding of the project.
+Architecture first.
 
-- Development is a natural and lifelong process.
-- Development cannot be measured directly.
-- Development is understood through evidence.
-- Observations are not evidence.
-- Evidence requires corroboration.
-- Institutional memory preserves organizational learning.
+Code second.
 
-These principles may evolve as research continues.
+Every feature starts with documentation.
 
----
+Every sprint ends with Git commit.
 
-# 10. Open Questions
-
-Examples
-
-- What is development?
-- What is memory?
-- What transforms experience into learning?
-- How should SchoolOS model development?
-- How should AI reason using evidence?
+Repository is the project's memory.
 
 ---
 
-# 11. Working Rules
+# Current Architecture
 
-- Think before writing.
-- Write before coding.
-- Commit every working session.
-- Research precedes documentation.
-- Documentation precedes architecture.
-- Architecture precedes implementation.
+Multi School
+
+Academic Year
+
+Teaching Assignment
+
+Observation
+
+Evidence
+
+Learner Profile
+
+Educational Passport
+
+AI Teacher Brief
 
 ---
 
-# 12. Starting a New Session
+# Coding Standards
 
-Every new working session should begin by reading:
+Domain-driven naming
 
-1. PROJECT_CONTEXT.md
-2. PROJECT_MEMORY.md
-3. The current research document.
+Separate Form / Table classes
 
-This guarantees continuity between conversations.
+Schema API
+
+Enum based state management
+
+Small commits
+
+Feature based development
