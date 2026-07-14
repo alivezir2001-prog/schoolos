@@ -12,26 +12,54 @@ return new class extends Migration
     public function up(): void
 {
     Schema::create('observations', function (Blueprint $table) {
-        $table->id();
 
-        $table->foreignId('school_id')->constrained()->cascadeOnDelete();
+    $table->id();
 
-        $table->foreignId('student_id')->constrained()->cascadeOnDelete();
+    // Multi-school
+    $table->foreignId('school_id')
+        ->constrained()
+        ->cascadeOnDelete();
 
-        $table->foreignId('observer_id')
-            ->constrained('users')
-            ->cascadeOnDelete();
+    // Learner
+    $table->foreignId('student_id')
+        ->constrained()
+        ->cascadeOnDelete();
 
-        $table->text('observation');
+    // Educational Context
+    $table->foreignId('teaching_assignment_id')
+        ->constrained()
+        ->cascadeOnDelete();
 
-        $table->string('location')->nullable();
+    // Observer
+    $table->foreignId('observer_id')
+        ->constrained('users')
+        ->cascadeOnDelete();
 
-        $table->string('attachment_path')->nullable();
+    // Observation text
+    $table->text('observation');
 
-        $table->timestamp('observed_at');
+    // Optional context
+    $table->string('location')->nullable();
 
-        $table->timestamps();
-    });
+    $table->string('attachment_path')->nullable();
+
+    // When it happened
+    $table->timestamp('observed_at');
+
+    $table->timestamps();
+
+    // Indexes
+    $table->index(
+        ['student_id', 'observed_at'],
+        'obs_student_date_idx'
+    );
+
+    $table->index(
+        ['teaching_assignment_id', 'observed_at'],
+        'obs_assignment_date_idx'
+    );
+
+});
 }
 
     /**

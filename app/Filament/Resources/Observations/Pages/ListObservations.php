@@ -10,10 +10,17 @@ class ListObservations extends ListRecords
 {
     protected static string $resource = ObservationResource::class;
 
+    protected static ?string $title = 'Gözlemler';
+
+    protected static ?string $breadcrumb = 'Gözlemler';
+
     protected function getHeaderActions(): array
     {
         return [
-            CreateAction::make(),
+
+            CreateAction::make()
+                ->label('Yeni Gözlem'),
+
         ];
     }
 }

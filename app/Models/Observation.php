@@ -21,6 +21,12 @@ class Observation extends Model
         'observed_at' => 'datetime',
     ];
 
+    /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    */
+
     public function school(): BelongsTo
     {
         return $this->belongsTo(School::class);
@@ -34,5 +40,31 @@ class Observation extends Model
     public function observer(): BelongsTo
     {
         return $this->belongsTo(User::class, 'observer_id');
+    }
+
+    /*
+    |--------------------------------------------------------------------------
+    | Domain Behaviour
+    |--------------------------------------------------------------------------
+    */
+
+    public function hasAttachment(): bool
+    {
+        return ! empty($this->attachment_path);
+    }
+
+    public function hasLocation(): bool
+    {
+        return ! empty($this->location);
+    }
+
+    public function isRecent(): bool
+    {
+        return $this->observed_at->isToday();
+    }
+
+    public function shortObservation(int $length = 120): string
+    {
+        return str($this->observation)->limit($length);
     }
 }

@@ -17,8 +17,14 @@ class ObservationForm
         return $schema
             ->components([
 
+                /*
+                |--------------------------------------------------------------------------
+                | Learner
+                |--------------------------------------------------------------------------
+                */
+
                 Select::make('student_id')
-                    ->label('Öğrenci')
+                    ->label('👤 Öğrenci')
                     ->options(function () {
 
                         $user = auth()->user();
@@ -30,34 +36,61 @@ class ObservationForm
                         }
 
                         return $query
+                            ->orderBy('last_name')
                             ->orderBy('first_name')
                             ->get()
                             ->mapWithKeys(fn (Student $student) => [
                                 $student->id => $student->full_name,
                             ]);
-
                     })
                     ->searchable()
+                    ->preload()
                     ->required(),
 
-                TextInput::make('location')
-                    ->label('Yer')
-                    ->placeholder('Örn: Fen Laboratuvarı, Bahçe, 7/A Sınıfı'),
-
-                DateTimePicker::make('observed_at')
-                    ->label('Gözlem Tarihi')
-                    ->default(now())
-                    ->required(),
+                /*
+                |--------------------------------------------------------------------------
+                | Observation
+                |--------------------------------------------------------------------------
+                */
 
                 Textarea::make('observation')
-                    ->label('Bugün ne gözlemlediniz?')
-                    ->rows(6)
-                    ->helperText('Yorum değil, gözlemlediğiniz olayı olduğu gibi yazınız.')
+                    ->label('📝 Bugün ne gözlemlediniz?')
+                    ->placeholder(
+                        'Örneğin: Bugün grup çalışması sırasında arkadaşlarının fikirlerini dikkatle dinledi ve tartışmaya katkı sağladı.'
+                    )
+                    ->hint(
+                        'Sadece fark ettiğiniz olayı doğal bir dille yazın. Yorum yapmak veya sonuç çıkarmak zorunda değilsiniz.'
+                    )
+                    ->rows(8)
                     ->required()
                     ->columnSpanFull(),
 
+                /*
+                |--------------------------------------------------------------------------
+                | Observation Time
+                |--------------------------------------------------------------------------
+                */
+
+                DateTimePicker::make('observed_at')
+                    ->label('📅 Gözlem Zamanı')
+                    ->default(now())
+                    ->seconds(false)
+                    ->required(),
+
+                /*
+                |--------------------------------------------------------------------------
+                | Optional Metadata
+                |--------------------------------------------------------------------------
+                */
+
+                TextInput::make('location')
+                    ->label('📍 Konum (İsteğe Bağlı)')
+                    ->placeholder(
+                        'Örn: Fen Laboratuvarı, Bahçe, Kütüphane, Okul Çıkışı'
+                    ),
+
                 FileUpload::make('attachment_path')
-                    ->label('Ek Dosya')
+                    ->label('📎 Ek Dosya (İsteğe Bağlı)')
                     ->disk('public')
                     ->directory('observations')
                     ->visibility('public')

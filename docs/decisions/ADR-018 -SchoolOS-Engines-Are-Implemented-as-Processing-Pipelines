@@ -1,0 +1,144 @@
+# ADR-018
+
+## Title
+
+SchoolOS Engines Are Implemented as Processing Pipelines
+
+---
+
+## Status
+
+Accepted
+
+---
+
+## Date
+
+2026-07-15
+
+---
+
+## Context
+
+As the engineering phase of SchoolOS began, it became necessary to define a consistent architectural model for implementing educational intelligence engines.
+
+Initial discussions focused on designing engines as collections of independent components.
+
+Further architectural analysis revealed that educational knowledge within SchoolOS is not static.
+
+It continuously flows from one theoretical layer to another.
+
+Educational observations become Patterns.
+
+Patterns become Evidence.
+
+Evidence supports Confidence.
+
+Confidence contributes to Insights.
+
+Insights contribute to Understanding.
+
+This progression represents a continuous knowledge transformation process rather than isolated software operations.
+
+---
+
+## Decision
+
+Every SchoolOS Engine shall be implemented as a processing pipeline.
+
+A pipeline transforms educational knowledge from one theoretical layer into the next.
+
+Each pipeline consists of sequential processing stages.
+
+Every stage performs exactly one architectural responsibility.
+
+The output of one stage becomes the input of the next.
+
+---
+
+## Rationale
+
+Processing pipelines naturally reflect the Educational Knowledge Model.
+
+They provide:
+
+- clear data flow
+- explicit processing stages
+- strong separation of responsibilities
+- high explainability
+- easier testing
+- future extensibility
+
+Pipeline architecture also prevents engines from bypassing theoretical layers.
+
+Knowledge must evolve progressively rather than through shortcuts.
+
+---
+
+## Consequences
+
+Every engine documentation must define its processing pipeline.
+
+Every engine implementation should follow the same architectural pattern.
+
+Typical pipeline stages include:
+
+- Input
+- Validation
+- Policy Evaluation
+- Context Resolution
+- Core Processing
+- Integrity Protection
+- Persistence
+- Domain Events
+- Output
+
+Individual engines may introduce additional stages when required.
+
+---
+
+## Alternatives Considered
+
+### Component-Oriented Architecture
+
+Rejected because components alone do not describe how educational knowledge evolves through the system.
+
+---
+
+### CRUD-Oriented Services
+
+Rejected because SchoolOS engines are responsible for knowledge transformation rather than simple data management.
+
+---
+
+### Event-Only Processing
+
+Rejected because events describe communication between engines but do not define the internal processing responsibilities of an engine.
+
+---
+
+## Related Documents
+
+- ENGINE_STANDARD.md
+- EDUCATIONAL_KNOWLEDGE_MODEL.md
+- OBSERVATION_THEORY.md
+- THEORY_REVIEW.md
+
+---
+
+## Notes
+
+Every processing stage should satisfy the following principles:
+
+- Single Responsibility
+- Explainability
+- Traceability
+- Deterministic Behavior
+- Explicit Inputs
+- Explicit Outputs
+
+A processing stage must never assume the responsibility of another theoretical layer.
+
+No pipeline may bypass the Educational Knowledge Model.
+
+Educational knowledge must always evolve progressively through the architecture.
