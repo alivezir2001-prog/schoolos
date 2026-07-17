@@ -153,3 +153,15 @@ modüler bir dijital asistandır.
 Ve
 
 **daha iyi okullar, daha iyi bir geleceğin başlangıcıdır.**
+
+SchoolOS exists to help educational communities discover meaningful relationships hidden within educational reality, enabling the continuous development of trustworthy educational knowledge.
+
+## Principle
+
+Educational reality is richer than any individual educator can fully observe.
+
+SchoolOS exists to expand the collective capacity of educational communities to discover meaningful relationships within that reality.
+
+It does not replace educational expertise.
+
+It amplifies it.
