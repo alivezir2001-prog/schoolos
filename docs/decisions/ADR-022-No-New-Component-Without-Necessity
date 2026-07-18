@@ -1,0 +1,7 @@
+## Decision
+
+A new framework component may only be introduced if its responsibility cannot reasonably belong to an existing component.
+
+## Rationale
+
+The framework should remain conceptually minimal and avoid unnecessary architectural growth.

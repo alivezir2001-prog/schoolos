@@ -1,0 +1,9 @@
+## Decision
+
+The framework searches for signals rather than discoveries.
+
+## Rationale
+
+Discoveries require evidence, professional judgment, and validation.
+
+Signals are the appropriate starting point of the discovery process.
